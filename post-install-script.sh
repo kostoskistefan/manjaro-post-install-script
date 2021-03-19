@@ -41,7 +41,7 @@ tmux source /home/${user}/.tmux.conf
 
 # Configure Kvantum Manager
 
-echo "Configuring Kvantum Manager"
+echo "Configuring Kvantum Manager..."
 
 git clone --quiet https://github.com/vinceliuice/chromeos-kde /home/${user}
 /home/${user}/chromeos-kde/install.sh
@@ -55,13 +55,18 @@ rm -r /home/${user}/Tela-icon-theme
 
 kvantummanager --set ChromeOS-dark
 
+# Configure Plasma
+
+echo "Configuring Plasma..."
+cp ${script_path}/plasma-config/* /home/${user}/.config/
+
 # Configure Nvidia drivers
 
 if lspci | grep -iq NVIDIA; then
     echo "Installing Nvidia drivers..."
     sudo mhwd -a pci nonfree 0300
 
-    echo "Configuring Optimus Manager"
+    echo "Configuring Optimus Manager..."
     if [[ -f /etc/sddm.conf ]]; then
         sed '/DisplayCommand/ s/^#*/#/' -i /etc/sddm.conf
         sed '/DisplayStopCommand/ s/^#*/#/' -i /etc/sddm.conf
