@@ -23,7 +23,7 @@ script_path=$(dirname "$(readlink -f "$0")")
 
 echo "Installing packages..."
 
-open_source_packages="zsh yay flameshot kdialog kvantum-manjaro neovim optimus-manager tmux fakeroot glibc lib32-glibc nodejs"
+open_source_packages="zsh yay flameshot kdialog kvantum-manjaro neovim optimus-manager tmux fakeroot glibc lib32-glibc nodejs khotkeys kglobalaccel"
 closed_source_packages="google-chrome"
 
 sudo pacman -S $open_source_packages --noconfirm --needed --quiet
@@ -75,11 +75,18 @@ kvantummanager --set ChromeOS-dark
 echo "Configuring Plasma..."
 sed "s/USER_NAME/${USER}/" "${script_path}/plasma-config/plasma-org.kde.plasma.desktop-appletsrc" > "${HOME}/.config/plasma-org.kde.plasma.desktop-appletsrc"
 mv "${HOME}/.config/khotkeysrc" "${HOME}/.config/khotkeysrc.bak"
-sudo rsync --protect-args -aqxP "${script_path}/plasma-config/" --exclude 'plasma' --exclude '.gtkrc-2.0' "${HOME}/.config"
+sudo rsync --protect-args -aqxP "${script_path}/plasma-config/" --exclude 'plasma' --exclude '.gtkrc-2.0' "${HOME}/.config/"
 sudo rsync --protect-args -aqxP "${script_path}/plasma-config/plasma" --exclude '.gtkrc-2.0' "${HOME}/.local/share/"
 sudo rsync --protect-args -aqxP "${script_path}/plasma-config/.gtkrc-2.0" "${HOME}/"
 # Fix different cursor themes
 sudo sh -c 'echo -e "[icon theme]\nInherits=breeze_cursors" > /usr/share/icons/default/index.theme'
+
+
+# Configure Konsole
+
+echo "Configuring Konsole..."
+sudo rsync --protect-args -aqxP "${script_path}/konsole-config/konsolerc" "${HOME}/.config/"
+sudo rsync --protect-args -aqxP "${script_path}/konsole-config/" --exclude 'konsolerc' "${HOME}/.local/share/konsole"
 
 # Configure Nvidia drivers
 
@@ -102,11 +109,6 @@ fi
 
 echo "Disabling Baloo Indexer..."
 balooctl disable
-
-# Configure Konsole
-
-echo "Configuring Konsole..."
-sudo rsync --protect-args -aqxP "${script_path}/konsole-config/" "${HOME}/.config/"
 
 # Configure ZSH
 
