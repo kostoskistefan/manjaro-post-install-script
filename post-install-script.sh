@@ -55,6 +55,9 @@ if [[ ! -d "${HOME}/.local/share/plasma/desktoptheme/ChromeOS" ]]; then
     git clone --quiet https://github.com/vinceliuice/chromeos-kde "/tmp/chromeos-kde"
     "/tmp/chromeos-kde/install.sh"
     sudo rm -rf "/tmp/chromeos-kde"
+    git clone --quiet https://github.com/vinceliuice/ChromeOS-theme "/tmp/chromeos-gtk" 
+    "/tmp/chromeos-gtk/install.sh"  
+    sudo rm -rf "/tmp/chromeos-gtk"
 fi
 
 if [[ ! -d "${HOME}/.local/share/icons/Tela-dark" ]]; then
@@ -72,8 +75,11 @@ kvantummanager --set ChromeOS-dark
 echo "Configuring Plasma..."
 sed "s/USER_NAME/${USER}/" "${script_path}/plasma-config/plasma-org.kde.plasma.desktop-appletsrc" > "${HOME}/.config/plasma-org.kde.plasma.desktop-appletsrc"
 mv "${HOME}/.config/khotkeysrc" "${HOME}/.config/khotkeysrc.bak"
-sudo rsync --protect-args -aqxP "${script_path}/plasma-config/" --exclude 'plasma' "${HOME}/.config"
-sudo rsync --protect-args -aqxP "${script_path}/plasma-config/plasma" "${HOME}/.local/share/"
+sudo rsync --protect-args -aqxP "${script_path}/plasma-config/" --exclude 'plasma' --exclude '.gtkrc-2.0' "${HOME}/.config"
+sudo rsync --protect-args -aqxP "${script_path}/plasma-config/plasma" --exclude '.gtkrc-2.0' "${HOME}/.local/share/"
+sudo rsync --protect-args -aqxP "${script_path}/plasma-config/.gtkrc-2.0" "${HOME}/"
+# Fix different cursor themes
+sudo sh -c 'echo -e "[icon theme]\nInherits=breeze_cursors" > /usr/share/icons/default/index.theme'
 
 # Configure Nvidia drivers
 
