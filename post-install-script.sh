@@ -81,7 +81,6 @@ sudo rsync --protect-args -aqxP "${script_path}/plasma-config/.gtkrc-2.0" "${HOM
 # Fix different cursor themes
 sudo sh -c 'echo -e "[icon theme]\nInherits=breeze_cursors" > /usr/share/icons/default/index.theme'
 
-
 # Configure Konsole
 
 echo "Configuring Konsole..."
