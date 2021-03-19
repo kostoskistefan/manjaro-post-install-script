@@ -1,0 +1,88 @@
+[DownloadDialog Settings]
+eDP-1 Height 768=494
+eDP-1 Width 1366=700
+
+[KFileDialog Settings]
+Recent Files[$e]=low-poly-wallpapers.jpg,file:$HOME/Pictures/low poly world.jpg,file:$HOME/Pictures/low-poly-wallpapers.jpg
+Recent URLs[$e]=file:$HOME/Pictures/,file:$HOME/Documents/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+eDP-1 Height 768=489
+eDP-1 Width 1366=463
+
+[PlasmaRunnerManager]
+LaunchCounts=2 services_applications:vmware-player.desktop,3 services_applications:kvantummanager.desktop,10 services_applications:unity-hub.desktop,2 services_applications:kcm_printer_manager.desktop,2 services_applications:powerdevilglobalconfig.desktop,4 services_applications:msm_kernel.desktop,6 services_applications:org.inkscape.Inkscape.desktop,1 places_/org/freedesktop/UDisks2/block_devices/sda2,19 services_applications:org.kde.konsole.desktop,1 services_applications:google-chrome.desktop,8 services_applications:steam.desktop,1 services_applications:kcm_nightcolor.desktop,2 services_applications:tor-browser-en.desktop,5 services_applications:xppentablet.desktop,7 services_applications:org.qt-project.qtcreator.desktop,2 services_applications:khotkeys.desktop,6 services_applications:kcm_touchpad.desktop,2 services_applications:mailspring.desktop,3 services_applications:spotify.desktop,1 services_applications:kcm_fonts.desktop,2 services_applications:org.kde.kmail2.desktop,2 services_applications:kamera.desktop,5 services_applications:burpsuite.desktop,2 services_applications:about-distro.desktop,1 services_applications:org.midori_browser.Midori.desktop,5 services_applications:eagle.desktop,12 services_applications:com.obsproject.Studio.desktop,37 services_applications:tmnationsforever_tmnationsforever.desktop,1 services_applications:org.kde.akonadiimportwizard.desktop,2 services_applications:xterm.desktop,7 services_applications:org.kde.krita.desktop,12 services_applications:blender.desktop,5 services_applications:postman_postman.desktop,4 services_applications:PlayOnLinux.desktop,9 services_applications:arduino-arduinoide.desktop,18 services_applications:org.manjaro.pamac.manager.desktop,23 services_applications:visual-studio-code.desktop,5 services_applications:kcm_kscreen.desktop,8 services_applications:msm_mhwd.desktop,2 services_applications:org.gnome.Evolution.desktop,1 services_applications:chrome-edcmabgkbicempmpgmniellhbjopafjh-Default.desktop,1 services_applications:kcm_notifications.desktop,1 services_applications:kcm_kwin_effects.desktop,1 services_applications:powerdevilprofilesconfig.desktop,2 services_applications:designer.desktop,1 services_applications:kcm_workspace.desktop,1 services_applications:kcm_kwin_virtualdesktops.desktop,2 services_applications:thunderbird.desktop,2 services_applications:org.kde.kate.desktop,2 services_applications:org.kde.kdenlive.desktop,5 services_applications:onlyoffice.desktop,2 services_applications:cxmenu-cxoffice-0-29ra4ke-CrossOver.desktop,1 services_applications:TrackMania Nations Forever.desktop,4 services_applications:componentchooser.desktop,1 services_applications:systemsettings.desktop,8 services_applications:Zoom.desktop,2 services_applications:mouse.desktop,2 services_applications:com.blackmagicdesign.resolve.desktop,3 services_applications:arduino.desktop,1 services_applications:Alacritty.desktop,11 services_applications:technic-launcher.desktop,4 services_applications:org.kde.partitionmanager.desktop,10 services_applications:libreoffice-writer.desktop,1 services_applications:kcm_keys.desktop,2 services_applications:nvidia-settings.desktop,1 services_applications:kcm_lookandfeel.desktop,1 services_applications:vmware-workstation.desktop,1 services_applications:com.github.ztefn.haguichi.desktop,1 services_applications:VSCodium.desktop,9 services_applications:org.kde.kcalc.desktop,1 services_applications:kcm_networkmanagement.desktop,2 services_applications:kcm_icons.desktop,2 services_applications:libreoffice-impress.desktop,9 services_applications:skypeforlinux.desktop,1 services_applications:org.qbittorrent.qBittorrent.desktop,2 services_applications:autostart.desktop,1 services_applications:org.bleachbit.BleachBit.desktop,10 services_applications:virtualbox.desktop
+
+[PlasmaViews][Panel 1]
+alignment=132
+
+[PlasmaViews][Panel 1][Defaults]
+maxLength=1366
+minLength=1332
+thickness=31
+
+[PlasmaViews][Panel 1][Horizontal1024]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1152]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1200]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1280]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1366]
+maxLength=1366
+minLength=1332
+thickness=31
+
+[PlasmaViews][Panel 1][Horizontal1440]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1600]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1640]
+maxLength=1640
+minLength=1640
+thickness=31
+
+[PlasmaViews][Panel 1][Horizontal1680]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1900]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1916]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal1920]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal2048]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal640]
+thickness=31
+
+[PlasmaViews][Panel 1][Horizontal800]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal864]
+thickness=45
+
+[PlasmaViews][Panel 1][Horizontal960]
+thickness=31
+
+[ScreenConnectors]
+0=eDP-1-1
+1=HDMI-1-1
+2=:0.0
+3=HDMI-1
+5=:2.0
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js
