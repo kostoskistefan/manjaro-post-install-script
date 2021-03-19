@@ -20,13 +20,13 @@ let g:rainbow_active = 1
 nmap <silent> <C-e> :FZF<CR>
 
 " Coc Configuration
-source /home/scyllius/.config/nvim/coc.vim
+source $HOME/.config/nvim/coc.vim
 
 " Floating Terminal Configuration
-source /home/scyllius/.config/nvim/float.vim
+source $HOME/.config/nvim/float.vim
 
 " Neovim Configuration
-source /home/scyllius/.config/nvim/neovim.vim
+source $HOME/.config/nvim/neovim.vim
 
 " NERDTree Configuration
-source /home/scyllius/.config/nvim/nerdtree.vim
+source $HOME/.config/nvim/nerdtree.vim

@@ -1,12 +1,5 @@
 " NERDTree Configuration
 
-" Hide brackets around folders
-" Has to be on top for the bellow commands to word
-" if exists('g:loaded_webdevicons')
-"     call webdevicons#refresh()
-" endif
-" autocmd VimEnter * source /home/scyllius/.config/nvim/init.vim
-
 " Switch to main window after opening NERDTree
 " autocmd VimEnter * NERDTree | wincmd p
 

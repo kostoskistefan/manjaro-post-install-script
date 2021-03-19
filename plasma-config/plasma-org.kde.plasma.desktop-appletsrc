@@ -178,7 +178,7 @@ wallpaperplugin=org.kde.image
 PreloadWeight=0
 
 [Containments][30][Wallpaper][org.kde.image][General]
-Image=file:///home/scyllius/.local/share/wallpapers/ChromeOS/contents/images/1920x1080.jpg
+Image=file:///home/USER_NAME/.local/share/wallpapers/ChromeOS/contents/images/1920x1080.jpg
 
 [Containments][8]
 activityId=

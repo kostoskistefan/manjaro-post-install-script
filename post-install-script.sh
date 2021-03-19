@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Get user
-
-user=$SUDO_USER
-
 # Get script path
 
 script_path=$(dirname $(readlink -f "$0"))
@@ -27,29 +23,29 @@ done
 # Configure Neovim
 
 echo "Configuring Neovim..."
-mkdir -p /home/${user}/.config/nvim
-rsync -aq ${script_path}/neovim-config/* /home/${user}/.config/nvim
+mkdir -p $HOME/.config/nvim
+rsync -aq ${script_path}/neovim-config/* $HOME/.config/nvim
 nvim +PlugInstall +qa!
 
 # Configure Tmux
 
 echo "Configuring Tmux..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-rsync -aq ${script_path}/tmux-config/* /home/${user}/
-/home/${user}/.tmux/plugins/tpm/scripts/install_plugins.sh
-tmux source /home/${user}/.tmux.conf
+rsync -aq ${script_path}/tmux-config/* $HOME/
+$HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
+tmux source $HOME/.tmux.conf
 
 # Configure Kvantum Manager
 
 echo "Configuring Kvantum Manager..."
 
-git clone --quiet https://github.com/vinceliuice/chromeos-kde /home/${user}
-/home/${user}/chromeos-kde/install.sh
-rm -r /home/${user}/chromeos-kde
+git clone --quiet https://github.com/vinceliuice/chromeos-kde $HOME
+$HOME/chromeos-kde/install.sh
+rm -r $HOME/chromeos-kde
 
-git clone --quiet https://github.com/vinceliuice/Tela-icon-theme /home/${user}
-/home/${user}/Tela-icon-theme/install.sh
-rm -r /home/${user}/Tela-icon-theme
+git clone --quiet https://github.com/vinceliuice/Tela-icon-theme $HOME
+$HOME/Tela-icon-theme/install.sh
+rm -r $HOME/Tela-icon-theme
 
 /usr/lib/plasma-changeicons Tela-dark
 
@@ -58,7 +54,7 @@ kvantummanager --set ChromeOS-dark
 # Configure Plasma
 
 echo "Configuring Plasma..."
-cp ${script_path}/plasma-config/* /home/${user}/.config/
+sed "s/USER_NAME/$USER/" ${script_path}/plasma-config/plasma-org.kde.plasma.desktop-appletsrc > $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc
 
 # Configure Nvidia drivers
 
@@ -86,12 +82,12 @@ balooctl disable
 
 echo "Configuring ZShell..."
 chsh -s /bin/zsh
-rsync -aq $script_path/zsh-config/* /home/${user}/
+rsync -aq $script_path/zsh-config/* $HOME/
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Install Powerlevel10K theme
-git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git /home/${user}/.oh-my-zsh/custom/themes/powerlevel10k
-source /home/${user}/.zshrc
+git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+source $HOME/.zshrc
 
 echo "Successfully configured!"
 echo "Please select the ChromeOS theme in KDE Settings > Appearance."
