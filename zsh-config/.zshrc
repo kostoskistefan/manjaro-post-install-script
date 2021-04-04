@@ -7,6 +7,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=$HOME/.zsh_history
 export ZSH="$HOME/.oh-my-zsh"
+export BROWSER=/usr/bin/google-chrome-stable
 
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
@@ -17,8 +18,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git tmux colored-man-pages)
 
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOSTART_ONCE=true
+#ZSH_TMUX_AUTOSTART=true
+#ZSH_TMUX_AUTOSTART_ONCE=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,4 +37,20 @@ alias vim='nvim'
 alias pg='ps aux | grep '
 alias pacman='sudo pacman'
 
-[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/scyllius/Programs/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/scyllius/Programs/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/scyllius/Programs/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/scyllius/Programs/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
